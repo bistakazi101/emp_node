@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Form</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial';
+            background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+        }
+
+        .login {
+            width: 382px;
+            overflow: hidden;
+            margin: auto;
+
+            padding: 80px;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(11px);
+            -webkit-backdrop-filter: blur(11px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        h2 {
+            text-align: center;
+            color: #ffffff;
+            padding: 20px;
+        }
+
+        label {
+            color: #ffffff;
+            font-size: 17px;
+        }
+
+        #Uname {
+            width: 300px;
+            height: 40px;
+            border: none;
+            border-radius: 3px;
+            padding-left: 8px;
+            color: black;
+            border-radius: 15px;
+        }
+
+        #Pass {
+            width: 300px;
+            height: 40px;
+            border: none;
+            border-radius: 3px;
+            padding-left: 8px;
+            border-radius: 15px;
+
+        }
+
+        #btn1 {
+
+            margin-left: 60px;
+        }
+
+        #btn2 {
+            margin-left: 50px;
+        }
+
+        #log {
+            width: 300px;
+            height: 30px;
+            border: none;
+            border-radius: 17px;
+            padding-left: 7px;
+            color: blue;
+
+
+        }
+
+        span {
+            color: white;
+            font-size: 17px;
+        }
+
+        a {
+            float: right;
+            background-color: none;
+        }
+
+        cd emp .title {
+            margin: none;
+            background-color: azure;
+
+        }
+
+        .black {
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            text-decoration: none;
+
+        }
+
+        .b {
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            font-style: italic;
+
+
+        }
+
+        .btn {
+            height: 30px;
+            width: 100px;
+            border-radius: 10px;
+            border: none;
+            margin: 3px;
+            font-weight: bold;
+        }
+
+        .btn btn-primary {
+            margin-left: none;
+
+        }
+
+        .title {
+            margin: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-img">
+
+
+        <div class="title">
+            <h2 class="b">Login Page</h2><br>
+        </div>
+        <div class="login">
+            <a class="black" href="userreg"> Signup Page</a>
+
+            <form method="POST" action="/Login">
+
+                <label class="black" <b>UserName</b></label>
+                <br>
+                <br>
+                <input type="Text" name="UserName" id="Uname" placeholder="Enter Username">
+                <br><br>
+
+                <label class="black"><b>Password
+                    </b>
+                </label>
+                <br>
+                <br>
+                <input type="Password" name="PassWord" id="Pass" placeholder="Enter Password">
+                <br><br>
+                <br>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <input class="btn btn-primary" type="reset" value="Reset">
+                <br><br>
+                <h1 style="background-color:white; color:red">{{this.message}}</h1>
+
+
+            </form>
+            <br>
+
+
+
+        </div>
+    </div>
+</body>
+
+</html>

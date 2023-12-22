@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  margin-left: 340px;
+  width: 50%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #150d0d;
+  border-style: solid;
+  border-width: 2px;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: rgb(96, 201, 237);}
+
+#customers th { 
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #0065fd;
+  color: white;
+}
+.title{
+  text-align: center;
+  background-color: rgb(96, 201, 237);
+}
+
+  </style>
+</head>
+<body>
+      <a class="nav-link active" aria-current="page" href="/dashboard">Home</a>
+ <div class="title"><h2>Users List</h2><br></div> 
+ <br><br>
+   <table id="customers">
+    <thead>
+      <tr>
+        <th>Username</th>
+        <th>PassWord</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <div class="table">
+      
+      <tbody>
+      {{#each users}}
+      <tr>
+        <td>{{this.UserName}}</td>
+        <td>{{this.PassWord}}</td>
+        <td>
+            <form action="/deleteuser" method="POST">
+              <input type="hidden" name="ID" value="{{this.ID}}">
+              <button type="submit" style="background-color: red; margin-bottom:5px; width:80px">Delete</button>
+            </form>
+            <form action="/updateusr" method="GET">
+              <input type="hidden" name="UserName" value="{{this.UserName}}">
+              <button type="submit" style="background-color: rgb(61, 248, 61); width:80px">Update</button>
+            </form>
+
+        </td>
+         
+         
+          
+      </tr>
+      {{/each}}
+    </tbody>
+    </div>
+    
+  </table>
+</body>
+</html>

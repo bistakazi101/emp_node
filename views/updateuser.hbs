@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Signup Form</title>
+    <style>
+        body {
+
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial';
+            background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+        }
+
+        .login {
+
+            width: 382px;
+            overflow: hidden;
+            margin: auto;
+         height: 500px;
+            padding: 80px;
+            
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(11px);
+            -webkit-backdrop-filter: blur(11px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 15px;
+
+        }
+
+        h2 {
+            text-align: center;
+           
+            padding: 20px;
+
+        }
+        
+        .btn {
+            height: 30px;
+            width: 100px;
+            border-radius: 10px;
+            border: none;
+            margin: 3px;
+            font-weight: bold;
+        }
+
+        .btn btn-primary {
+            margin-left: none;
+
+        }
+
+        label {
+            color: #08ffd1;
+            font-size: 17px;
+        }
+
+        #Uname {
+            width: 300px;
+            height: 40px;
+            border: none;
+            border-radius: 10px;
+            padding-left: 8px;
+        }
+
+        #Pass {
+            width: 300px;
+            height: 40px;
+            border: none;
+            border-radius: 10px;
+            padding-left: 8px;
+
+        }
+
+        .btn1 {
+            margin-left: 100px;
+        }
+
+        #log {
+            width: 300px;
+            height: 30px;
+            border: none;
+            border-radius: 17px;
+            padding-left: 7px;
+            color: blue;
+
+
+        }
+
+        span {
+            color: white;
+            font-size: 17px;
+        }
+
+        a {
+            float: right;
+            background-color: none;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .close {
+
+            text-align: right;
+
+        }
+
+        .btn-close {
+
+            color: red;
+
+        }
+
+        .title {
+            margin: none;
+           width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+<div>
+        <div class="title">
+ <div class="title">
+        <h2 style="color: white; font-style:italic">User Update Form</h2
+    </div>
+
+
+    <div class="login">
+        <a href="dashboard"> Home Page</a>
+        {{#each Usersschema}}
+        <form method="POST" action="/updateusr">
+            <label><b style="color:white;font-weight:bold">UserName</b></label>
+            <br>
+            <br>
+            <input type="Text" name="UserName" value="{{this.UserName}}" id="Uname" placeholder="Enter Username">
+            <br><br>
+
+            <label><b style="color:white; font-weight:bold">Password
+                </b>
+            </label>
+            <br>
+            <br>
+            <input type="Password" name="PassWord" value="{{this.PassWord}}" id="Pass" placeholder="Enter Password">
+            <br><br>
+            <br>
+
+            <button type="submit" class="btn btn-primary">Update</button>
+
+            <input class="btn btn-primary" id="btn1" type="reset" value="Reset">
+
+
+        </form>
+
+    </div>
+
+    {{/each}}
+    </div>
+</body>
+
+</html>
